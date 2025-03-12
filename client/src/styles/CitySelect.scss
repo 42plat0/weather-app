@@ -1,0 +1,52 @@
+/* CitySelect Component Styles
+ *
+ * This file contains all styles for the CitySelect component
+ * using SCSS nesting for better organization and maintainability
+ */
+
+// Main container for the city select component
+// Centers content and sets maximum width
+.city-select-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+
+  // Styles for the react-select dropdown component
+  .city-select {
+    margin-bottom: 1rem;
+  }
+
+  // Container for the most viewed cities section
+  .most-viewed-cities {
+    // Header styling for "Most Viewed Cities"
+    h4 {
+      margin-bottom: 0.5rem;
+      color: #333;
+      font-size: 1rem;
+    }
+
+    // Flex container for city chips
+    // Uses flexbox for responsive layout
+    .city-chips {
+      display: flex;
+      gap: 0.5rem; // Space between chips
+      flex-wrap: wrap; // Allow wrapping on smaller screens
+
+      // Individual city chip button styling
+      .city-chip {
+        padding: 0.5rem 1rem;
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        border-radius: 20px; // Pill-shaped buttons
+        cursor: pointer;
+        transition: background-color 0.2s; // Smooth hover effect
+
+        // Hover state for better interactivity
+        &:hover {
+          background-color: #e0e0e0;
+        }
+      }
+    }
+  }
+} 
